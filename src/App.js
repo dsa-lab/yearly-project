@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Dashboard from './pages/Dashboard';
+import SignIn from './pages/SignIn';
 import MainPage from "./pages/MainPage"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Layout from "./compenents/Layout"
@@ -8,7 +9,7 @@ import { makeStyles } from '@material-ui/core';
 import Coordinator from './compenents/Dashboard/Coordinator';
 import { useState,useEffect } from 'react';
 import Create from "./pages/Create"
-import Login from './pages/Login';
+import Login from './pages/SignUp';
 function App() {
   const [loading,setLoading]=useState(false);
   const [user,setUser]=useState({})
@@ -33,10 +34,11 @@ console.log(event.clientX,event.clientY);
       <Router>
       <Layout user={user}>
         <Switch>
-          {/* <Route exact path="/"><MainPage loading={loading}/></Route> */}
-          <Route exact path="/"><Login loading={loading}/></Route>
+          <Route exact path="/"><MainPage loading={loading}/></Route>
+          <Route  path="/login"><Login loading={loading}/></Route>
           <Route  path="/dashboard"><Dashboard loading={loading} user={user}/></Route>
           <Route  path="/create"><Create loading={loading} user={user}/></Route>
+          <Route  path="/signin"><SignIn /></Route>
         </Switch>
         </Layout>
       </Router>
