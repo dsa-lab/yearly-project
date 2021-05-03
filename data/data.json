@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "SeirekKezdeshuuchu",
+      "img": "./avatar.jpeg"
+    }
+  ],
+  "posts": [
+    {
+      "title": "asfasf",
+      "details": "asfas",
+      "category": "programming",
+      "id": 1
+    }
+  ]
+}
